@@ -1,0 +1,15 @@
+---
+- name: VMware vCenter Ping Testi
+  hosts: localhost
+  gather_facts: no
+  collections:
+    - community.vmware
+
+  tasks:
+    - name: vCenter Bağlantısını Test Et
+      vmware.vmware_rest.login:
+        validate_certs: no
+
+    - name: Test Başarılı Mesajı
+      debug:
+        msg: "vCenter ile bağlantı başarılı!"
