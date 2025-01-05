@@ -5,7 +5,7 @@
   
   tasks:
   - name:  Get VM UUIDs
-    community.vmware.vmware_guset_info:
+    community.vmware.vmware_guest_info:
       validate_certs: no
       name: "{{ inventory_hostname }}"
     delegate_to: localhost
